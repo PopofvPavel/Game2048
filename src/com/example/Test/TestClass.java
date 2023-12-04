@@ -1,4 +1,4 @@
-package com.example;
+package com.example.Test;
 
 import com.example.Board.Board;
 import com.example.Board.Key;
