@@ -5,6 +5,7 @@ import com.example.Board.Key;
 import com.example.Board.SquareBoard;
 import com.example.Game.Game;
 import com.example.Game.Game2048;
+import com.example.Game.GameHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ public class TestClass {
     public static void main(String[] args) {
         Board board = new SquareBoard(4);
         Game game2048 = new Game2048(board);
-        System.out.println(game2048.canMove());
+/*        System.out.println(game2048.canMove());
         List<Integer> list = new ArrayList<>();
         list.add(5);
         list.add(2);
@@ -41,7 +42,24 @@ public class TestClass {
         System.out.println(board.hasValue(3));
         System.out.println(board.hasValue(7));
         System.out.println(board.hasValue(null));
-        System.out.println(board.getValues(asList(new Key(0,0), new Key(3,3),new Key(1,1))));
+        System.out.println(board.getValues(asList(new Key(0,0), new Key(3,3),new Key(1,1))));*/
+
+        GameHelper gameHelper = new GameHelper();
+
+
+        List<Integer> result1 = gameHelper.moveAndMergeEqual(asList(1, 2, null, 3));
+        List<Integer> result2 = gameHelper.moveAndMergeEqual(asList(2, 2, null, 3));
+        List<Integer> result3 = gameHelper.moveAndMergeEqual(asList(2, 2, 4, 4));
+        List<Integer> result4 = gameHelper.moveAndMergeEqual(asList(2, 2, 2, 3));
+        List<Integer> result5 = gameHelper.moveAndMergeEqual(asList(2, null, null, 2));
+        List<Integer> result6 = gameHelper.moveAndMergeEqual(asList(null, null, null, null));
+
+        System.out.println(result1); // [1, 2, 3, null]
+        System.out.println(result2); // [4, 3, null, null]
+        System.out.println(result3); // [4, 8, null, null]
+        System.out.println(result4); // [4, 2, 3, null]
+        System.out.println(result5); // [4, null, null, null]
+        System.out.println(result6); // [null, null, null, null]
 
     }
-}
+    }
