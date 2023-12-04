@@ -2,7 +2,6 @@ package com.example.Game;
 
 import com.example.Board.Board;
 import com.example.Board.Key;
-import com.example.Direction;
 
 import java.util.ArrayList;
 import java.util.Collections;
