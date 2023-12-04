@@ -53,6 +53,7 @@ public class TestClass {
         List<Integer> result4 = gameHelper.moveAndMergeEqual(asList(2, 2, 2, 3));
         List<Integer> result5 = gameHelper.moveAndMergeEqual(asList(2, null, null, 2));
         List<Integer> result6 = gameHelper.moveAndMergeEqual(asList(null, null, null, null));
+        List<Integer> result7 = gameHelper.moveAndMergeEqual(asList(1, 2, 3, 4));
 
         System.out.println(result1); // [1, 2, 3, null]
         System.out.println(result2); // [4, 3, null, null]
@@ -60,6 +61,14 @@ public class TestClass {
         System.out.println(result4); // [4, 2, 3, null]
         System.out.println(result5); // [4, null, null, null]
         System.out.println(result6); // [null, null, null, null]
+        System.out.println(result7);
+
+        Board board2 = new SquareBoard(2);
+        Game game2048_2 = new Game2048(board);
+        board2.fillBoard(asList(1, 2, 3, 4));
+        board2.fillBoard(asList(7, 6, 5, 0  ));
+        System.out.println(board2.getBoard());
+
 
     }
     }
