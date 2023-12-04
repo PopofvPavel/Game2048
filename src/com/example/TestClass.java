@@ -16,7 +16,7 @@ public class TestClass {
     public static void main(String[] args) {
         Board board = new SquareBoard(4);
         Game game2048 = new Game2048(board);
-/*        System.out.println(game2048.canMove());
+        System.out.println(game2048.canMove());
         List<Integer> list = new ArrayList<>();
         list.add(5);
         list.add(2);
@@ -42,7 +42,7 @@ public class TestClass {
         System.out.println(board.hasValue(3));
         System.out.println(board.hasValue(7));
         System.out.println(board.hasValue(null));
-        System.out.println(board.getValues(asList(new Key(0,0), new Key(3,3),new Key(1,1))));*/
+        System.out.println(board.getValues(asList(new Key(0,0), new Key(3,3),new Key(1,1))));
 
         GameHelper gameHelper = new GameHelper();
 

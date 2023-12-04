@@ -52,12 +52,16 @@ public class SquareBoard extends Board {
 
     @Override
     public Key getKey(int i, int j) {
-        Key key = new Key(i, j);
-        if (this.getBoard().containsKey(key)) {
-            return key;
-        } else {
-            throw new IllegalArgumentException("Key not found: " + key);
+        Key searchKey = new Key(i, j);
+        if (this.getBoard().containsKey(searchKey)) {
+            for (Key key : this.getBoard().keySet()) {
+                if (key.equals(searchKey)) {
+                    return key;
+                }
+            }
         }
+        return null;
+
     }
 
     @Override
